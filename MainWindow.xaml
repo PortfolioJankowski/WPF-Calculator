@@ -1,0 +1,146 @@
+﻿<Window x:Class="WPFCalculator.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:local="clr-namespace:WPFCalculator"
+		mc:Ignorable="d"
+		Title="Calculator" Height="525" Width="350">
+    <Window.Resources>
+        <SolidColorBrush x:Key="numbersColor" Color="#444444"/>
+        <SolidColorBrush x:Key="operatorsColor" Color="Orange" />
+        <SolidColorBrush x:Key="weirdColors" Color="Black" />
+    </Window.Resources>
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="69.863"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label x:Name="resultLabel" 
+               Content="0"
+			   Grid.ColumnSpan="4"
+			   HorizontalAlignment="Right"
+			   VerticalAlignment="Bottom"/>
+        <Button x:Name="acButton"  
+                Style="{StaticResource additionalButtonsStyle}"
+                Content="AC" 
+				Grid.Row="1" Click="acButton_Click_1"/>
+        <Button x:Name="weirdButton" 
+                Style="{StaticResource additionalButtonsStyle}"
+                Content="+/-"
+				Grid.Row="1"
+				Grid.Column="1"/>
+        <Button x:Name="percentButton"  
+                Content="%"
+                Style="{StaticResource additionalButtonsStyle}"
+				Grid.Row="1"
+				Grid.Column="2"/>
+        <Button x:Name="divideButton" 
+                Style="{StaticResource operationButtonsStyle}"
+                Click="OperationButton_Click"
+                Content="/"
+				Grid.Row="1"
+				Grid.Column="3"/>
+        <Button x:Name="sevenButton"
+                Style="{StaticResource numberButtonsSyle}"
+                Click="NumberButton_Click"
+                Content="7"
+				Grid.Row="2"
+				Grid.Column="0"/>
+        <Button x:Name="eightButton" 
+                Style="{StaticResource numberButtonsSyle}"
+                Click="NumberButton_Click"
+                Content="8"
+				Grid.Row="2"
+				Grid.Column="1"/>
+        <Button x:Name="nineButton"   
+                Style="{StaticResource numberButtonsSyle}"
+                Click="NumberButton_Click"
+                Content="9"
+				Grid.Row="2"
+				Grid.Column="2"/>
+        <Button x:Name="multiplyButton" 
+                Style="{StaticResource operationButtonsStyle}"
+                Click="OperationButton_Click"
+                Content="*"
+				Grid.Row="2"
+				Grid.Column="3"/>
+        <Button x:Name="fourButton" 
+                Style="{StaticResource numberButtonsSyle}"
+                Click="NumberButton_Click"
+                Content="4" 
+				Grid.Row="3"
+				Grid.Column="0"/>
+        <Button x:Name="fiveButton"  
+                Style="{StaticResource numberButtonsSyle}"
+                Content="5"
+				Grid.Row="3"
+				Grid.Column="1"
+                Click="NumberButton_Click"/>
+        <Button x:Name="sixButton"    
+                Style="{StaticResource numberButtonsSyle}"
+                Click="NumberButton_Click"
+                Content="6"
+				Grid.Row="3"
+				Grid.Column="2"/>
+        <Button x:Name="minusButton" 	
+                Style="{StaticResource operationButtonsStyle}"
+                Click="OperationButton_Click"
+                Content="-"
+				Grid.Row="3"
+				Grid.Column="3"/>
+        <Button x:Name="oneButton"   
+                Style="{StaticResource numberButtonsSyle}"
+                Click="NumberButton_Click"
+                Content="1"
+				Grid.Row="4"
+				Grid.Column="0"/>
+        <Button x:Name="twoButton"  
+                Style="{StaticResource numberButtonsSyle}"
+                Click="NumberButton_Click"
+                Content="2"
+				Grid.Row="4"
+				Grid.Column="1"/>
+        <Button x:Name="threeButton"  
+                Style="{StaticResource numberButtonsSyle}"
+                Click="NumberButton_Click"
+                Content="3"
+				Grid.Row="4"
+				Grid.Column="2"/>
+        <Button x:Name="plusButton" 		
+                Style="{StaticResource operationButtonsStyle}"
+                Content="+"
+				Grid.Row="4"
+				Grid.Column="3"
+                Click="OperationButton_Click"/>
+        <Button x:Name="zeroButton"     
+                Style="{StaticResource numberButtonsSyle}"
+                Click="NumberButton_Click"
+                Content="0"
+				Grid.Row="5"
+				Grid.ColumnSpan="2"
+				Grid.Column="0"/>
+        <Button x:Name="dotButton"  
+                Style="{StaticResource numberButtonsSyle}"
+                Click="poinButton_Click"
+                Content="."
+				Grid.Row="5"
+				Grid.Column="2"/>
+        <Button x:Name="equalsButton" 				
+                Style="{StaticResource operationButtonsStyle}"
+                Content="="
+				Grid.Row="5"
+				Grid.Column="3"/>
+    </Grid>
+</Window>
+  
